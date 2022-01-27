@@ -35,9 +35,9 @@ class HomePage extends StatelessWidget {
             case ConnectionState.done:
               final user = FirebaseAuth.instance.currentUser;
               if (user?.emailVerified ?? false) {
-                print("You are verified user");
+                print("You are verified user!");
               } else {
-                print("You are not verified user");
+                print("Please verify your email and try again!");
               }
               return const Text("Done!");
             default:
